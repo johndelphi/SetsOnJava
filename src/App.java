@@ -3,15 +3,16 @@ import java.util.Set;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Set<String> city= new HashSet<>();
+        //HashSet
+        Set<String> city= new LinkedHashSet<>();
         city.add("london");
         city.add("Nairobi");
         city.add("Dubaui");
+        city.add("Arusha");
         System.out.println(city);
-        for(String s:city){
-        System.out.println(s.toUpperCase()+"\n");
-         System.out.println(s.toLowerCase()+"\n");
-
-        }
+        //Treeset
+        TreeSet<String> treeSetName = new TreeSet<>(city);
+        System.out.println("Sorted treeset " + treeSetName);
+        
     }
 }
